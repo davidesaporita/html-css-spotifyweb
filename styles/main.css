@@ -15,11 +15,21 @@ a,
 a:hover,
 a:active {
   text-decoration: none;
-  color: white;
 }
 
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #aaa;
+}
 
 /* Utilities */
+.u-flexlist {
+  display: flex;
+  flex-direction: column;
+}
 
 .button {
   padding: 10px;
@@ -44,12 +54,25 @@ a:active {
   flex-grow: 1;
 }
 
-/* Sidebar (over 600px )*/
+/* Sidebar (over 600px)*/
 #sidebar {
   display: flex;
   flex-direction: column;
-  flex-basis: 230px; /* Larghezza Sidebar */
+  flex-basis: 215px;
+  padding: 18px 0 5px;
   background-color: #000;
+}
+
+#sidebar a,
+#sidebar img,
+#sidebar h5 {
+  padding-left: 18px;
+  padding-right: 20px;
+  border-left: 2px solid transparent;
+}
+
+#sidebar .main-buttons a:first-child {
+  border-left: 2px solid #ADFE2D;
 }
 
 .sidebar-top {
@@ -57,7 +80,7 @@ a:active {
 }
 
 .sidebar-bottom {
-  height: 80px; /* DEBUG */ /* Rimuovere e lasciare impostare a flex */
+
 }
 
 /* Content */
@@ -76,9 +99,14 @@ a:active {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 85px;
   background: rgba(0,0,0,.5);
   z-index: 1;
+}
+
+.logo {
+  height: 36px;
+  max-width: 100%;
 }
 
 #content .scrollable {
@@ -88,7 +116,7 @@ a:active {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  padding: 90px 15px 30px;
+  padding: 85px 15px 30px;
 }
 
 .content-menu {
