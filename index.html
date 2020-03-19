@@ -7,8 +7,9 @@
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-  <!-- Custom style -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="shared/css/style.css">
   <link rel="stylesheet" href="styles/main.css">
   <title>Spotify Clone</title>
 </head>
@@ -18,12 +19,21 @@
     <main id="main-window">
       <!-- Sidebar -->
       <aside id="sidebar">
-        <div class="sidebar-top">
+        <div class="sidebar-top u-text">
           <img class="logo" src="img/logo.svg" alt="">
           <div class="main-buttons u-flexlist">
-            <a href="" class="active"><i>+</i> Home</a>
-            <a href=""><i>+</i> Cerca</a>
-            <a href=""><i>+</i> La tua libreria</a>
+            <a href="" class="active">
+              <img src="img\home.svg" alt="">
+              <span>Home</span>
+            </a>
+            <a href="">
+              <img src="img\search.svg" alt="">
+              <span>Cerca</span>
+            </a>
+            <a href="">
+              <img src="img\libreria.svg" alt="">
+              <span>La tua libreria</span>
+            </a>
           </div>
           <div class="playlist-items u-flexlist">
             <h5>PLAYLIST</h5>
@@ -34,9 +44,9 @@
             <a href="">Playlist 4</a>
           </div>
         </div>
-        <div class="sidebar-bottom u-flexlist">
-          <a href="#"><i>+</i> Installa app</a>
-          <a href="#"><i>+</i> John Johnson</a>
+        <div class="sidebar-bottom u-flexlist u-text">
+          <a href="#" class="install-label"><i>+</i> Installa app</a>
+          <a href="#" class="account-name"><i>+</i> John Johnson</a>
         </div>
       </aside>
       <!-- End Sidebar -->
@@ -47,7 +57,7 @@
           <a href="#" class="button" role="button">Effettua l'upgrade</a>
         </div>
         <div class="scrollable">
-          <nav class="content-menu u-flexlistInline">
+          <nav class="content-menu u-flexlistInline u-text u-text--medium">
             <a href="#" class="content-menu-item active">In evidenza</a>
             <a href="#" class="content-menu-item">Podcast</a>
             <a href="#" class="content-menu-item">Classifiche</a>
@@ -124,7 +134,41 @@
     <!-- End Main Content -->
 
     <!-- Bottom Player -->
-    <footer id="player">Player</footer>
+    <footer id="player" class="u-flexlistInline">
+      <div class="album-playing u-flexlistInline">
+        <div class="album-image-thumb u-imageFit">
+          <img src="img\sinister.jpeg" alt="">
+        </div>
+        <div class="album-titles u-flexlist u-text">
+          <span class="item-artist">Dester</span>
+          <span class="item-name u-text--tiny">Nome del brano</span>
+        </div>
+        <div class="item-options u-flexlistInline u-text u-paddingRight--12">
+          <a href="#"><i class="far fa-heart"></i></a>
+          <a href="#"><i class="far fa-folder"></i></a>
+        </div>
+      </div>
+      <div class="main-controls u-flexlist">
+        <div class="main-top-controls u-flexlistInline u-paddingRight--20">
+          <a href="#"><i class="fas fa-random"></i></a>
+          <a href="#"><i class="fas fa-step-backward"></i></a>
+          <a href="#" id="play-button"><i class="far fa-play-circle"></i></i></a>
+          <a href="#"><i class="fas fa-step-forward"></i></a>
+          <a href="#"><i class="fas fa-redo-alt"></i></a>
+        </div>
+        <div class="main-bottom-controls u-flexlistInline u-text u-text--tiny u-marginRight--35">
+          <span>0:25</span>
+          <div class="u-bar u-bar--long"></div>
+          <span>4:35</span>
+        </div>
+      </div>
+      <div class="rightside-controls u-flexlistInline u-text u-icon u-paddingRight--15">
+        <a href="#"><i class="fas fa-list-ul"></i></a>
+        <a href="#"><i class="fas fa-desktop"></i></a>
+        <a href="#"><i class="fas fa-volume-up"></i></a>
+        <div class="u-bar u-bar--volume"></div>
+      </div>
+    </footer>
     <!-- End Bottom Player -->
   </div>
 </body>

@@ -25,6 +25,13 @@ a:hover {
   color: #aaa;
 }
 
+h5 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 13px;
+}
+
 /* Utilities */
 .u-flexlist {
   display: flex;
@@ -35,6 +42,91 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.u-imageFit {
+  position: relative;
+}
+
+.u-imageFit img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.u-text,
+.u-text a {
+  font-size: 14px;
+  color: #767676;
+}
+
+.u-text--medium,
+.u-text--medium a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.u-text--tiny,
+.u-text--tiny * {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.u-icon,
+.u-icon a {
+  color: #ccc;
+}
+
+.u-bar {
+  position: relative;
+  background-color: #535353;
+  width: 100px;
+  height: 3px;
+  border-radius: 1.5px;
+}
+
+.u-bar--long {
+  width: 580px;
+}
+
+.u-bar::after,
+.u-bar--long::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 35%;
+  background-color: #aaa;
+  border-top-left-radius: 1.5px;
+  border-bottom-left-radius: 1.5px;
+}
+
+.u-marginRight--12 :not(:last-child) {
+  margin-right: 12px;
+}
+
+.u-marginRight--20 :not(:last-child) {
+  margin-right: 20px;
+}
+
+.u-marginRight--35 :not(:last-child) {
+  margin-right: 35px;
+}
+
+.u-paddingRight--12 :not(:last-child) {
+  padding-right: 12px;
+}
+
+.u-paddingRight--15 :not(:last-child) {
+  padding-right: 15px;
+}
+
+.u-paddingRight--20 :not(:last-child) {
+  padding-right: 20px;
 }
 
 .button {
@@ -70,19 +162,47 @@ a:hover {
 }
 
 #sidebar a,
-#sidebar img,
+#sidebar .logo,
 #sidebar h5 {
   padding-left: 18px;
   padding-right: 20px;
   border-left: 2px solid transparent;
 }
 
+#sidebar a {
+  font-size: 12px;
+}
+
 #sidebar .main-buttons a.active {
   border-color: #ADFE2D;
 }
 
-.sidebar-top {
+#sidebar .sidebar-top {
   flex-grow: 1;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.main-buttons {
+  justify-content: center;
+}
+
+.main-buttons > a {
+  display: flex;
+  align-items: center;
+}
+
+.main-buttons > * {
+  min-height: 18px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.main-buttons img {
+  height: 20px;
+  padding-right: 8px;
 }
 
 .sidebar-bottom {
@@ -178,6 +298,37 @@ a:hover {
 
 /* Bottom Player */
 #player {
-  height: 80px; /* DEBUG */
+  height: 78px;
   background-color: #272727;
+  justify-content: space-between;
+  padding: 20px 8px;
+}
+
+.album-image-thumb {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+#player .item-artist {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.item-options {
+  margin-left: 40px;
+}
+
+.main-top-controls {
+  padding-bottom: 10px;
+}
+
+.u-bar--long::after {
+  width: 19%;
+}
+
+#play-button {
+  font-size: 28px;
+  margin: 0 10px;
 }
